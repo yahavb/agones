@@ -32,6 +32,7 @@ libssl-dev libvorbis-dev libxrandr-dev libx11-dev nettle-dev pkg-config zlib1g-d
 git subversion
 
 RUN git clone -b allow-ai https://github.com/markmandel/stk-code.git
+#RUN git clone https://github.com/supertuxkart/stk-code.git
 RUN svn co https://svn.code.sf.net/p/supertuxkart/code/stk-assets stk-assets
 RUN rm -rf ./stk-code/.git
 RUN rm -rf ./stk-assets/.svn
@@ -45,7 +46,7 @@ FROM debian:buster
 
 RUN apt update && apt-get install -y libbluetooth3 libbz2-1.0 libc6 \
  libcurl4 libenet7 libfreetype6 libfribidi0 libgcc1 libgl1 libglu1-mesa \
- libglu1 libjpeg62-turbo libogg0 libopenal1 libpng16-16 libstdc++6 libvorbis0a sqlite3 procps \
+ libglu1 libjpeg62-turbo libogg0 libopenal1 libpng16-16 libstdc++6 libvorbis0a sqlite3 procps vim \
  libvorbisenc2 libvorbisfile3 libx11-6 libxrandr2 zlib1g libglew2.1 libharfbuzz0b
 
 RUN useradd -m  -u 1000 supertuxkart

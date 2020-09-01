@@ -17,4 +17,4 @@
 set -e
 set +x
 
-./wrapper -i "./cmake_build/bin/supertuxkart --server-config=$(pwd)/server_config.xml"
+./wrapper -i "./cmake_build/bin/supertuxkart --server-config=$(pwd)/server_config.xml --network-ai=3"
