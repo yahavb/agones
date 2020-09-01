@@ -27,7 +27,7 @@ FROM debian:buster as stk-builder
 
 RUN apt update && apt-get install -y build-essential cmake libbluetooth-dev \
 libcurl4-openssl-dev libenet-dev libfreetype6-dev libharfbuzz-dev libfribidi-dev \
-libgl1-mesa-dev libglew-dev libjpeg-dev libogg-dev libopenal-dev libpng-dev \
+libgl1-mesa-dev libglew-dev libjpeg-dev libogg-dev libopenal-dev libpng-dev procps sqlite3 \
 libssl-dev libvorbis-dev libxrandr-dev libx11-dev nettle-dev pkg-config zlib1g-dev \
 git subversion
 
@@ -45,7 +45,7 @@ FROM debian:buster
 
 RUN apt update && apt-get install -y libbluetooth3 libbz2-1.0 libc6 \
  libcurl4 libenet7 libfreetype6 libfribidi0 libgcc1 libgl1 libglu1-mesa \
- libglu1 libjpeg62-turbo libogg0 libopenal1 libpng16-16 libstdc++6 libvorbis0a \
+ libglu1 libjpeg62-turbo libogg0 libopenal1 libpng16-16 libstdc++6 libvorbis0a sqlite3 procps \
  libvorbisenc2 libvorbisfile3 libx11-6 libxrandr2 zlib1g libglew2.1 libharfbuzz0b
 
 RUN useradd -m  -u 1000 supertuxkart
